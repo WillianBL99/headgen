@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# verify if passed the help option
+if [ "$1" == "-h" ] || [ "$1" == "--help" ]; then
+    .help
+    exit
+fi
+
 LOGO_PATH="$1"
 chmod +rwx "$LOGO_PATH"
 shift
